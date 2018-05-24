@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    virtual-host: demo
+    username: lancer
+    password: 123456
+turbine:
+  stream:
+    port: 8989  #默认8989
