@@ -1,10 +1,10 @@
 spring:
   rabbitmq:
-    host: localhost
-    port: 5672
-    virtual-host: demo
-    username: lancer
-    password: 123456
+    host: ${rabbitmq.host}
+    port: ${rabbitmq.port}
+    virtual-host: ${rabbitmq.virtual-host}
+    username: ${rabbitmq.username}
+    password: ${rabbitmq.password}
 turbine:
   stream:
     port: 8989  #默认8989
