@@ -1,0 +1,6 @@
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: lancer
+  password: 123456
+  virtual-host: demo

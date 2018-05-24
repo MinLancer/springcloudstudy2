@@ -11,11 +11,11 @@ spring:
           enabled: true
         enabled: true
   rabbitmq:
-      host: localhost
-      port: 5672
-      username: lancer
-      password: 123456
-      virtual-host: demo
+      host: ${rabbitmq.host}
+      port: ${rabbitmq.port}
+      username: ${rabbitmq.username}
+      password: ${rabbitmq.password}
+      virtual-host: ${rabbitmq.virtual-host}
 
 server:
   port: 14000
