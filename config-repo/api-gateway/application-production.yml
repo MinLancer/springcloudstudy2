@@ -1,0 +1,54 @@
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0 # 将采样比例设置为 1.0，也就是100%,全部都需要。默认是 0.1
+
+  zipkin:
+    base-url: http://localhost:9411/ # 指定了 Zipkin 服务器的地址
+  cloud:
+      bus:
+        trace:
+          enabled: true
+        enabled: true
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: lancer
+      password: 123456
+      virtual-host: demo
+
+server:
+  port: 14000
+zuul:
+   routes: # 自定义各模块的路由,默认模块名
+    producer-db : /p/**
+    consumer-db : /c/**
+#  SendResponseFilter:
+#    post:
+#     disable: true #禁用SendResponseFilter 过滤器
+
+#logging setting
+logging:
+ level:
+  org:
+   springframework:
+    web:
+     servlet:
+      DispatcherServlet: DEBUG
+      
+#security setting
+security:
+ token:
+  #token过期时间，单位分钟
+  expire: 30  
+ rsa:
+  #RSA 模
+  modulus: 120749774428185480467622030722535804071445078993623309709775427878906293937338059423076695854937532244466465395164541641368876529295825453848760144835049363522545908104302024165873971414491110512342791594610742544380402908598585190494003507524195754273822268813447403290817343077571516216147839402414940310061
+  #RSA 公钥指数
+  public_exponent: 65537
+  #RSA 私钥指数
+  private_exponent: 73923469942286919561803730971048133587965873619209827001168953680477872428610977313161774128992838682156392947263251899461404460204267953359475632559803617319478756560848229397545070273747796303141458040475889804016062973476403760709402857872540300632704514872361476749953797952016730690123983122643596231873
+  #RSA 用户名
+  accessKeys: lancer,user
+  #RSA 用户密码
+  secretKeys: 111111,pwd
