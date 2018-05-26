@@ -31,9 +31,9 @@ server:
 #    web:
 #      exposure:
 #        include: hystrix.stream
-#tm:
-# manager:
-#  url: http://localhost:8899/tx/manager/
+tm:
+ manager:
+  url: ${tm.manager.url}
 logging:
  level:
   com:
