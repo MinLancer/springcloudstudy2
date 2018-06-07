@@ -23,6 +23,7 @@ zuul:
    routes: # 自定义各模块的路由,默认模块名
     producer-db : /p/**
     consumer-db : /c/**
+    system : /s/**
 #  SendResponseFilter:
 #    post:
 #     disable: true #禁用SendResponseFilter 过滤器
