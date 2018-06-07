@@ -18,3 +18,7 @@ security:
   accessKeys: lancer,user
   #RSA 用户密码
   secretKeys: 111111,pwd
+  
+logging:
+  level:
+    com.dongpeng: debug
