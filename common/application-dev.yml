@@ -18,6 +18,30 @@ security:
   accessKeys: lancer,user
   #RSA 用户密码
   secretKeys: 111111,pwd
+
+#request timeout setting
+#路由方式是url的方式，以下配置生效。默认1秒
+zuul:
+ host:
+  connection-request-timeout-millis: 5000
+  max-total-connections: 500
+
+#路由方式是serviceId，以下配置生效。默认1秒
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
+
+#zuul配置了熔断fallback,以下熔断超时配置生效。默认1秒
+#如有组件跟Hystrix配合使用，一般来讲，建议Hystrix的超时 > 其他组件的超时，否则将可能导致重试特性失效。
+hystrix:
+  command:
+    #default代表默认，可使用某个特定的serviceId为对应server配熔断超时策略
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds:6000
+ 
   
 logging:
   level:
