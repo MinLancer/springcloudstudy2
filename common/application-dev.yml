@@ -42,7 +42,3 @@ hystrix:
           thread:
             timeoutInMilliseconds:6000
  
-  
-logging:
-  level:
-    com.dongpeng: debug
