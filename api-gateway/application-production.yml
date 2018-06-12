@@ -28,12 +28,4 @@ zuul:
 #    post:
 #     disable: true #禁用SendResponseFilter 过滤器
 
-#logging setting
-logging:
- level:
-  org:
-   springframework:
-    web:
-     servlet:
-      DispatcherServlet: DEBUG
       
