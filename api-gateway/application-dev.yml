@@ -24,6 +24,7 @@ zuul:
     producer-db : /p/**
     consumer-db : /c/**
     system : /s/**
+    websocket : /ws/**
 #  SendResponseFilter:
 #    post:
 #     disable: true #禁用SendResponseFilter 过滤器

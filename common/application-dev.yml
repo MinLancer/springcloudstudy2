@@ -43,10 +43,10 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds:6000
+            timeoutInMilliseconds:5000
     #websocket默认心跳25s
     websocket:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds:26000
+            timeoutInMilliseconds:27000
