@@ -31,7 +31,7 @@ zuul:
 
 #路由方式是serviceId，以下配置生效。默认1秒
 ribbon:
-  ReadTimeout: 26000
+  ReadTimeout: 6000
   ConnectTimeout: 3000
 
 #zuul配置了熔断fallback,以下熔断超时配置生效。默认1秒
