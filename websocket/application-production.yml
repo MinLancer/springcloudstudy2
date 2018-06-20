@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    bus:
+      trace:
+        enabled: true
+      enabled: true
+server:
+  port: 15000
+
+
+ 
