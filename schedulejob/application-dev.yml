@@ -6,6 +6,9 @@ spring:
       enabled: true
 server:
   port: 16000
-
+  
+ 
+quartz: 
+ location: classpath:/quartz.properties
 
  
